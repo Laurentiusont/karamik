@@ -214,11 +214,20 @@ body {
         font-size: 12px;
     }
 }
+.title-login {
+    font-size: 1.5em;
+    font-weight: 700;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.sub-title-login {
+    font-weight: 300;
+    font-family: 'Roboto Condensed', sans-serif;
+}
 
 /* gallery */
 .gallery img{
     max-width: 100%;
-    height: auto;
+    height: 100%;
 }
 .gallery{
     height:100vh;
@@ -236,13 +245,13 @@ body {
     margin-right: auto;
     overflow: hidden;
 }
-.gallery__img,
+.gallery__image,
 .gallery__card::after,
 .gallery__data{
     position: absolute;
 }
 
-.gallery__img{
+.gallery__image{
     inset: 0;
     margin: auto;
     transition: transform .3s;
@@ -302,8 +311,8 @@ body {
     width: 260px;
 }
 
-.gallery-cards:hover .gallery__img{
-    transform: scale(1.1);
+.gallery-cards:hover .gallery__image{
+    transform: scale(1.5);
 }
 
 .gallery .swiper-wrapper{
@@ -446,86 +455,219 @@ body {
     padding: 0 10px;
 }
 
-/* Login & Sign up */
-.title-login {
-    font-size: 1.5em;
+/* contactus form */
+.form-area{
+    padding-top: 5%;
+}
+.row.single-form{
+    box-shadow: 0 2px 20px -5px rgba(0,0,0,0.5);
+    background: #fff;
+}
+.left{
+    background: blueviolet;
+    padding: 200px 93px;
+}
+.left h2{
+    font-family: poppins;
+    color: #fff;
     font-weight: 700;
-    font-family: 'Roboto Condensed', sans-serif;
-}
-.sub-title-login {
-    font-weight: 300;
-    font-family: 'Roboto Condensed', sans-serif;
-}
+    font-size: 48px;
 
-.txt_field label {
+}
+.left h2 span {
+    font-weight: 100;
+}
+.right{
+    padding: 70px 100px;
     position: relative;
-    top: -20px;
-    color: #adadad;
-    transform: translateY(-50%);
-    font-size: 16px;
-    pointer-events: none;
-    transition: .5s;
 }
-
-.txt_field input {
-    border: none;
-    border-bottom: 2px solid #adadad;
+.right i{
+    position: absolute;
+    font-size: 80px;
+    left:-27px;
+    top:40%;
+    color: #fff;
+}
+.form-control{
+    border: 2px solid #000;
+}
+.right button{
+    border:none;
     border-radius: 0;
-    background-color: transparent;
+    background: #252525;
+    width:180px;
+    color:#fff;
+    padding: 15px 0;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor:pointer;
+}
+.right button:hover{
+    background: #252525;
+}
+@media (min-width: 768px) and (max-width:991px){
+    right i{
+        top: -52px;
+        transform: rotate(900deg);
+        left:50%;
+    }
+}
+
+@media (max-width:767px){
+    .left{
+        padding: 90px 15px;
+        text-align: center;
+    }
+    .left h2{
+        font-size: 25px;
+    }
+    .right{
+        padding: 25px;
+    }
+    .right i{
+        top: -25px;
+        transform: rotate(90deg);
+        left: 45%
+    }
+    .right button{
+        width: 150px;
+        padding: 12px 0;
+    }
+}
+
+/* shop */
+.shop .card:hover{
+    box-shadow: 20px 20px 80px -44px white;
+    transition: .5s ease-in-out;
+    cursor:pointer;
+}
+.shop .w-100{
+    height: 50vh;
+}
+.products-preview{
+    position: fixed;
+    top:0; left:0;
+    min-height: 100vh;
     width: 100%;
-}
-
-.txt_field input:focus ~ label,
-.txt_field input:valid ~ label {
-    top: -40px;
-    left: 1px;
-    font-size: 0.8em;
-    color: #2691d9;
-}
-
-.login-btn {
-    width: 100%;
-    height: 40px;
-    background-color: #2691d9;
-    color: white;
-    border: none;
-    box-shadow: 2px 2px 2px rgba(68, 68, 68, 0.6)
-}
-
-.tulisan {
-    font-weight: 300;
-    font-family: 'Roboto Condensed', sans-serif;
-}
-
-.remember {
-   font-size: 0.8em;
-}
-
-.sub-row:hover label ~ .sub-row input {
-    background-color: #ccc;
-  }
-
-.sub-row input:checked ~ .sub-row input {
-    background-color: #2196F3;
-}
-
-.no-acc {
-    font-weight: 300;
-    font-family: 'Roboto Condensed', sans-serif;
-}
-
-.fp {
-    text-align: right;
-    font-weight: 300;
-    font-family: 'Roboto Condensed', sans-serif;
-}
-
-.icons-row {
-    background-color: black; 
-    border-radius: 100%;
-}
-
-.agree {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 0.9em;
-}
+    background: rgba(0,0,0,.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+ }
+ 
+ .products-preview .preview{
+    display: none;
+    padding:2rem;
+    text-align: center;
+    background: #fff;
+    position: relative;
+    margin:2rem;
+    width: 40rem;
+ }
+ 
+ .products-preview .preview.active{
+    display: inline-block;
+ }
+ 
+ .products-preview .preview img{
+    height: 30rem;
+ }
+ 
+ .products-preview .preview .fa-times{
+    position: absolute;
+    top:1rem; right:1.5rem;
+    cursor: pointer;
+    color:#444;
+    font-size: 4rem;
+ }
+ 
+ .products-preview .preview .fa-times:hover{
+    transform: rotate(90deg);
+ }
+ 
+ .products-preview .preview h3{
+    color:#444;
+    padding:.5rem 0;
+    font-size: 2.5rem;
+ }
+ 
+ .products-preview .preview .stars{
+    padding:1rem 0;
+    font-size: 1.7rem;
+ }
+ 
+ .products-preview .preview .stars i{
+    color:#27ae60;
+ }
+ 
+ .products-preview .preview .stars span{
+    color:#999;
+ }
+ 
+ .products-preview .preview p{
+    line-height: 1.5;
+    padding:1rem 0;
+    font-size: 1.6rem;
+    color:#777;
+ }
+ 
+ .products-preview .preview .price{
+    padding:1rem 0;
+    font-size: 2.5rem;
+    color:#27ae60;
+ }
+ 
+ .products-preview .preview .buttons{
+    display: flex;
+    gap:1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+ }
+ 
+ .products-preview .preview .buttons a{
+    flex:1 1 16rem;
+    padding:1rem;
+    font-size: 1.8rem;
+    color:#444;
+    border:.1rem solid #444;
+ }
+ 
+ .products-preview .preview .buttons a.cart{
+    background: #444;
+    color:#fff;
+ }
+ 
+ .products-preview .preview .buttons a.cart:hover{
+    background: #111;
+ }
+ 
+ .products-preview .preview .buttons a.buy:hover{
+    background: #444;
+    color:#fff;
+ }
+ 
+ 
+ /* @media (max-width:991px){
+ 
+    html{
+       font-size: 55%;
+    }
+ 
+ }
+  */
+ @media (max-width:768px){
+ 
+    .products-preview .preview img{
+       height: 25rem;
+    }
+ 
+ }
+ 
+ /* @media (max-width:450px){
+ 
+    html{
+       font-size: 50%;
+    }
+ 
+ } */
