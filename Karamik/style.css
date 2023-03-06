@@ -51,7 +51,7 @@ body {
     text-align: justify;
 }
 .box{
-    background-color:rgb(26, 206, 56);
+    background-color:rgb(225, 148, 80);
     color:#fff;
     text-align: center;
     padding: 20px 0px;
@@ -102,13 +102,13 @@ body {
 
 .nav-link:hover {
   font-size: 1.05em;
-  color: #1AAE9F !important;
+  color: #f2d727 !important;
 }
 
 .nav-link::after {
   display: block;
   content: '';
-  border-bottom: 2px solid #1AAE9F;
+  border-bottom: 2px solid #f2d727;
   transform: scaleX(0);
   transition: transform 500ms cubic-bezier(1, 0.19, 0, 0.86);
   transform-origin: left;
@@ -123,7 +123,7 @@ body {
     -webkit-transition-duration: 0.3s;
 }
 .btn:hover, .btn:focus, .btn:active{
-    background-color: #1E90FF;
+    background-color: #f2d727;
     color: #fff;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
     -webkit-transform: scale(1.1);
@@ -224,10 +224,14 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+.text-justify{
+    text-align: justify;
+}
 /* gallery */
 .gallery img{
     max-width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 .gallery{
     height:100vh;
@@ -426,9 +430,10 @@ body {
     border-radius: 50%;
     border: 7px solid #fff;
     margin-top: -80px;
+    object-fit: cover;
 }
 .card:hover .img2 img{
-    border-color: darkcyan;
+    border-color: blueviolet;
     transition: .7s;
 }
 .main-text{
@@ -647,27 +652,97 @@ body {
     color:#fff;
  }
  
+ .modal-body img{
+    width:100%;
+ }
  
- /* @media (max-width:991px){
+ @media (max-width:991px){
  
-    html{
+    modal{
        font-size: 55%;
     }
  
  }
-  */
+ 
  @media (max-width:768px){
  
-    .products-preview .preview img{
+    .modal-body img{
        height: 25rem;
     }
  
  }
  
- /* @media (max-width:450px){
+ @media (max-width:450px){
  
-    html{
+    modal{
        font-size: 50%;
     }
  
- } */
+ }
+
+.stars{
+    padding:1rem 0;
+    font-size: 1.7rem;
+ }
+ 
+.stars i{
+    color:#27ae60;
+ }
+ 
+.stars span{
+    color:#999;
+ }
+.desc{
+    line-height: 1.5;
+    padding:1rem 0;
+    font-size: 1.6rem;
+    color:#777;
+ }
+.price{
+    padding:1rem 0;
+    font-size: 2.5rem;
+    color:#27ae60;
+ }
+.modal-body h3{
+    color:#444;
+    padding:.5rem 0;
+    font-size: 2.5rem;
+ }
+html{
+    scroll-behavior: smooth;
+}
+
+/* home content */
+.section-header{
+    text-align: center;
+    margin-bottom: 60px;
+}
+.section-header .line{
+    margin: 15px auto;
+}
+.row.port-img img{
+    width: 100%;
+}
+.no-pad{
+    padding: 0;
+}
+.single-services{
+    padding: 40px 20px;
+    margin:0 15px 15px;
+    text-align: center;
+}
+.services-icon{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    padding: 20px;
+}
+.services-icon i{
+    font-size: 35px;
+    color:#222;
+}
+.single-services h2{
+    line-height: 1.9;
+    font-size: 25px;
+    font-weight: 700;
+}
