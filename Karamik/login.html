@@ -23,64 +23,49 @@
     />
   </head>
   <body>
-    <div class="container-fluid row w-100" style="margin: 0; padding: 0">
-      <div class="login-form col" style="background-color: #fffdd0">
+    <div class="login-form bg-login"></div>
+    <div class="container-fluid row w-100" style="margin: 0; padding: 0; z-index: 2; position: absolute;">
         <div class="ms-auto me-auto w-50 h-100 d-flex align-items-center">
+        <div class="ms-auto me-auto" style="background-color: #FFFDD0; padding: 40px; border: 1px solid black; box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6); width: 400px; height: 640px;">
           <form>
-            <div class="d-flex justify-content-center mb-2">
+            <div class="d-flex justify-content-center">
               <img width="120px" src="Karamik logo.png" />
             </div>
-            <div class="title-login">Login to Kàramik</div>
-            <div class="sub-title-login mb-3">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-              alias fugit laboriosam ullam architecto impedit?
+            <div class="title-login mb-1" style="text-align: center;">Kàramik</div>
+            <div class="sub-title-login mb-4">
+              Welcome to Kàramik !! <br> 
+              Please log-in first before enter the page
             </div>
-            <div class="form-group mb-4">
-              <input
-                type="email"
-                class="form-control"
-                style="
-                  border: none;
-                  border-bottom: 1px solid gray;
-                  border-radius: 0;
-                  background-color: transparent;
-                "
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-                placeholder="Username"
-              />
+            <div class="form-group">
+              <div class="txt_field">
+                <input type="text" name="nama" id="nama" required>
+                <span></span>
+                <label>Username</label>  
+              </div>
             </div>
-            <div class="form-group mb-2">
-              <input
-                style="
-                  border: none;
-                  border-bottom: 1px solid gray;
-                  border-radius: 0;
-                  background-color: transparent;
-                "
-                type="password"
-                class="form-control"
-                id="exampleInputPassword1"
-                placeholder="Password"
-              />
+            <div class="form-group">
+              <div class="txt_field">
+                <input type="password" name="pass" id="pass" required>
+                <span></span>
+                <label>Password</label>  
+                </div>
             </div>
-            <div class="form-group form-check mb-2">
-              <input
-                type="checkbox"
-                class="form-check-input"
-                id="exampleCheck1"
-              />
-              <label class="form-check-label" for="exampleCheck1"
-                >Check me out</label
-              >
+            <div class="d-flex row">
+              <div class="col"></div>
+              <!-- rapihin lagi -->
+              <div class="col fp mb-3"><a href="#">forget password?</a></div>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="login-btn mb-3">Login</button>
+            <div class="tulisan mb-3">or login with</div>
+            <div class="icons d-flex row mb-3">
+              <div class="col" style="text-align: center;"><img src="google_png.png" width="45px" class="icons-row"></div>
+              <div class="col" style="text-align: center;"><img src="twitter_png.png" width= "45px" class="icons-row"></div>
+              <div class="col" style="text-align: center;"><img src="facebook_png.png" width= "45px" class="icons-row"></div>
+            </div>
+            <div>don't have an account? <a href="signup.html">Sign up</a></div>
           </form>
         </div>
-      </div>
-      <div class="login-image col" style="padding: 0">
-        <img src="bg-login.jpg" class="w-100" alt="background_login" />
-      </div>
+        </div>
     </div>
   </body>
 </html>

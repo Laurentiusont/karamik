@@ -23,18 +23,17 @@
     />
   </head>
   <body>
-    <div class="container-fluid row w-100" style="margin: 0; padding: 0">
-      <div class="login-form col" style="background: #FFA07A ;">
+    <div class="login-form bg-login"> </div>
+    <div class="container-fluid row w-100" style="margin: 0; padding: 0; z-index: 2; position: absolute;">
         <div class="ms-auto me-auto w-50 h-100 d-flex align-items-center">
-        <div class="ms-auto me-auto" style="background-color: #FFFDD0; padding: 40px; border: 1px solid black; box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);">
+        <div class="ms-auto me-auto" style="background-color: #FFFDD0; padding: 40px; border: 1px solid black; box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6); width: 400px; height: 640px;">
           <form>
-            <div class="d-flex justify-content-center mb-3">
+            <div class="d-flex justify-content-center">
               <img width="120px" src="Karamik logo.png" />
             </div>
-            <div class="title-login">Sign up to Kàramik</div>
+            <div class="title-login mb-1" style="text-align: center;">Kàramik</div>
             <div class="sub-title-login mb-3">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-              alias fugit laboriosam ullam architecto impedit?
+              Please fill out the form
             </div>
             <div class="form-group">
               <div class="txt_field">
@@ -71,14 +70,14 @@
                 <label>Repeat Password</label>  
                 </div>
             </div>
-            <div class="mb-2 col">
+            <div class="mb-3 col">
               <!-- ngepasin tulisan checkbox sama ganti abis dicheck jadi warna biru -->
               <input type="checkbox" name="remember" id="remember">
               <label class="agree" >I agree to the <b>Terms of User</b> </label>
               <span class="checkmark"></span>
             </div>
             <button type="submit" class="login-btn mb-3">Sign Up</button>
-            <div style="text-align: center;">Already have an account? <a href=""> Log in </a></div>
+            <div style="text-align: center;">Already have an account? <a href="login.html"> Log in </a></div>
           </form>
         </div>
         </div>
